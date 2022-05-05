@@ -8,7 +8,7 @@ public class Main {
         PlayableCharacter survivor = new PlayableCharacter("Anna", backpack);
 
         //the basics
-        Location lillaTorg = new Location("Lilla torg", 1, 1, "heavily breathing drunk people", 1, true, 0);
+        Location lillaTorg = new Location("Lilla torg", 2, 1, "heavily breathing intoxicated people", 2, true, 0);
 
         //the populated location
         PopulatedLocation populatedLillaTorg = new PopulatedLocation(lillaTorg);
@@ -21,6 +21,8 @@ public class Main {
         System.out.println("There is "+lillaTorg.howManyItemsOnTheGroundInLocation + " items on the ground, it is a "+ populatedLillaTorg.getTheNamesOfItemsOnLocation()  +". There are "+populatedLillaTorg.getHowManyQuestsOnLocation()+ " quests here.");
 
         System.out.println("If you want a quest you should talk to the people here, one of them knows about a quest. In the quest you have to "+ populatedLillaTorg.getInformationAboutQuest()+ ".");
+
+        System.out.println("You said you want to talk to "+ populatedLillaTorg.theNonplayableCharactersAtLocation.get(0).name);
 
 
     }

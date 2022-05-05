@@ -7,6 +7,7 @@ public class Quest {
     String thingToDo;
     String whereToDoThing;
     String goToThisLocationWhenMissionIsDone;
+
     ArrayList<Quest> allQuests = new ArrayList<>();
 
     public Quest(String thingToDo, String whereToDoThing, String goToThisLocationWhenMissionIsDone) {

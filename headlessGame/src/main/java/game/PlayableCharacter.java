@@ -21,4 +21,5 @@ public class PlayableCharacter extends Character {
     public Backpack getPlayersBackpack() {
         return playersBackpack;
     }
+
 }

@@ -44,12 +44,12 @@ public class NonPlayableCharacter extends Character {
         return howmanyNPC;
     }
 
-    public String getInformationAboutTheQuest() {
-        /*
+    public String getInformationAboutTheQuestAtIndexZero() {
+
         if (quest == null){
             return "There is no quest here.";
         }
-        */
+
         return quest.getThingToDo() + quest.getWhereToDoThing() + quest.getGoToThisLocationWhenMissionIsDone();
     }
 

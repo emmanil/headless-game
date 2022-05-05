@@ -53,8 +53,13 @@ public class PopulatedLocation {
         String namesOfNPC = "";
         for (int i = 0; i < theNonplayableCharactersAtLocation.size(); i++) {
             namesOfNPC = namesOfNPC + theNonplayableCharactersAtLocation.get(i).getName();
-            if (i > 0) {
-                namesOfNPC = namesOfNPC + " ";
+
+            if (i >= 0) {
+                namesOfNPC = namesOfNPC + " at index "+i +"";
+
+                if(i <  theNonplayableCharactersAtLocation.size()-1){
+                    namesOfNPC = namesOfNPC + " and ";
+                }
             }
         }
         return namesOfNPC;
@@ -78,6 +83,6 @@ public class PopulatedLocation {
 
     public String getInformationAboutQuest() {
 
-        return tempNPC.getInformationAboutTheQuest();
+        return tempNPC.getInformationAboutTheQuestAtIndexZero();
     }
 }
