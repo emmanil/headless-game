@@ -8,8 +8,11 @@ public class PopulatedLocation {
     ArrayList<NonPlayableCharacter> theNonplayableCharactersAtLocation;
     ArrayList<Item> theItemsOnLocation;
     ArrayList<Quest> questsAtLocation;
+    Tile tileNumber;
 
     NonPlayableCharacter tempNPC = new NonPlayableCharacter("t", false);
+
+
     Quest tempQuest = new Quest("t", "t", "t");
 
     public PopulatedLocation(Location location) {

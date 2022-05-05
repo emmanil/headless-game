@@ -8,7 +8,8 @@ public class Main {
         PlayableCharacter survivor = new PlayableCharacter("Anna", backpack);
 
         //the basics
-        Location lillaTorg = new Location("Lilla torg", 2, 1, "heavily breathing intoxicated people", 2, true, 0);
+        Location lillaTorg = new Location("Lilla torg", 2, 1, "heavily breathing intoxicated people", 2, true, 0, "A01");
+        //TODO add tile to gameboard!!!!
 
         //the populated location
         PopulatedLocation populatedLillaTorg = new PopulatedLocation(lillaTorg);
@@ -23,6 +24,16 @@ public class Main {
         System.out.println("If you want a quest you should talk to the people here, one of them knows about a quest. In the quest you have to "+ populatedLillaTorg.getInformationAboutQuest()+ ".");
 
         System.out.println("You said you want to talk to "+ populatedLillaTorg.theNonplayableCharactersAtLocation.get(0).name);
+
+
+        Gameboard theGameBoard = new Gameboard("theGameBoard", 8,8);
+
+        theGameBoard.getAllTiles();
+
+        theGameBoard.setTileThePlayerIsOn(theGameBoard.getTileNumberOfTheTilePlayerIsOn());
+
+        //no value to get yet
+        System.out.println(theGameBoard.getTileNumberOfTheTilePlayerIsOn());
 
 
     }
