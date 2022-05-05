@@ -33,7 +33,7 @@ public class PopulatedLocation {
             questsAtLocation = tempQuest.getThisManyQuest(location.howManyQuestsOnLocation);
         }
 
-        //populate NPC with quest
+        //populate NPC with quest. Reactive programming used to initialize smallestValue.
         int smallestValue = (theNonplayableCharactersAtLocation.size() > questsAtLocation.size()) ? (smallestValue = theNonplayableCharactersAtLocation.size()) : (smallestValue = questsAtLocation.size());
 
         if (location.howManyQuestsOnLocation > 0) {
