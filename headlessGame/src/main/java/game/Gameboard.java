@@ -9,9 +9,10 @@ public class Gameboard {
     private int numRows;
     private int locationsPerRow;
 
-    private Gameboard theGameBoard = new Gameboard("theGameBoard", 10,10);
+    //private Gameboard theGameBoard = new Gameboard("theGameBoard", 10,10);
 
-    List<Location> gameBoard = new ArrayList<Location>();
+    List<Location> theGameBoard = new ArrayList<Location>();
+
 
     //private Location locationTemp = new Location("99");
     //Class location = locationTemp.getClass();
