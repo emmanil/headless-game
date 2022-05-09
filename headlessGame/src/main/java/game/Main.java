@@ -1,5 +1,8 @@
 package game;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -21,15 +24,13 @@ public class Main {
         System.out.println("You said you want to talk to "+ populatedLillaTorg.theNonplayableCharactersAtLocation.get(0).name);
         */
 
-        Gameboard theGameBoard = new Gameboard("theGameBoard", 10,10);
 
-        theGameBoard.getAllLocationsOnGameBoard();
 
-        theGameBoard.setNewLocationPlayerIsOn("A01");
+        //theGameBoard.getAllLocationsOnGameBoard();
 
-        System.out.println();
+        //theGameBoard.setNewLocationPlayerIsOn(theGameBoard, "A01");
 
-        System.out.println("\n" + survivor.getName() +" you are on location "+ theGameBoard.getLocationPlayerIsOn());
+        //System.out.println("\n" + survivor.getName() +" you are on location "+ theGameBoard.getLocationPlayerIsOn());
 
         //no value to get yet
 

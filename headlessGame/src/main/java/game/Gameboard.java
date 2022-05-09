@@ -9,9 +9,12 @@ public class Gameboard {
     private int numRows;
     private int locationsPerRow;
 
-    private List<Location> theGameBoard = new ArrayList<Location>();
+    private Gameboard theGameBoard = new Gameboard("theGameBoard", 10,10);
 
-    private Location locationTemp = new Location("99");
+    List<Location> gameBoard = new ArrayList<Location>();
+
+    //private Location locationTemp = new Location("99");
+    //Class location = locationTemp.getClass();
 
     public Gameboard(String locationNumber, int numRows, int locationsPerRow) {
         this.locationNumber = locationNumber;
@@ -58,14 +61,14 @@ public class Gameboard {
         return locationsPerRow;
     }
 
-    public void setNewLocationPlayerIsOn(String locationNumberPlayerWantsToGoTo){
-        for (int i = 0; i < theGameBoard.size(); i++) {
-            if (theGameBoard.get(i).getLocationNumber().equals(locationNumberPlayerWantsToGoTo)){
+    public void setNewLocationPlayerIsOn(Gameboard gameboard, String locationNumberPlayerWantsToGoTo){
 
-            }
-        }
-        //below not done 9/5
-      locationTemp.setLocationPlayerIsOn(locationNumberPlayerWantsToGoTo);
+
+    }
+
+
+    public Gameboard getTheGameBoard() {
+        return theGameBoard;
     }
 
 

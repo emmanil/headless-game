@@ -86,7 +86,22 @@ public class Location implements Comparable<Location> {
         return locationNumber.indexOf(0);
     }
 
-    public void setLocationPlayerIsOn(String locationNumber) {
+    public void setLocationPlayerIsOn(Gameboard gameboard, String locationNumberPlayerWantsToGoTo) {
+
+        if (gameboard.contains(locationNumber)){
+            this.locationNumber = locationNumber;
+        }
+
+        for (int i = 0; i < theGameBoard.size(); i++) {
+            if (theGameBoard.get(i).getLocationNumber().equals(locationNumberPlayerWantsToGoTo)){
+            }
+        }
+        //below not done 9/5
+        locationTemp.setLocationPlayerIsOn(locationNumberPlayerWantsToGoTo);
+
+
+
+
 
         //hitta location med locationNumber
         //TODO
