@@ -5,36 +5,41 @@ import java.util.List;
 
 public class Gameboard {
 
-    private String tileNumber;
+    private final String locationNumber;
     private int numRows;
-    private int tilesPerRow;
+    private int locationsPerRow;
 
-    public List<Tile> theGameBoard = new ArrayList<>();
+    private List<Location> theGameBoard = new ArrayList<Location>();
 
+    private Location locationTemp = new Location("99");
 
-    public Gameboard(String tileNumber, int numRows, int tilesPerRow) {
-        this.tileNumber = tileNumber;
-
+    public Gameboard(String locationNumber, int numRows, int locationsPerRow) {
+        this.locationNumber = locationNumber;
         int lastRow = 'A' + (numRows - 1);
-
         for (char row = 'A'; row <= lastRow; row++) {
 
-            for (int seatNum = 1; seatNum <= tilesPerRow; seatNum++) {
-                Tile tile = new Tile(row + String.format("%02d", seatNum));
+            for (int locationNum = 1; locationNum <= locationsPerRow; locationNum++) {
+                Location tile = new Location(row + String.format("%02d", locationNum));
                 theGameBoard.add(tile);
             }
         }
     }
 
     // for testing purposes
-    public void getAllTiles() {
-        for (Tile tile : theGameBoard) {
-            System.out.print(tile.getTileNumber() + " ");
+    public void getAllLocationsOnGameBoard() {
+        for (Location location : theGameBoard) {
+            System.out.print(location.getLocationNumber() + " ");
         }
     }
 
-    public ArrayList<String> getPossibleExitsFromTilePlayersIsOn(String nameOfTheTilePlayerIsOn) {
-        ArrayList<String> nameOfTilesThePlayerCanGoTo = new ArrayList<>();
+    public Location getLocationPlayerIsOn() {
+        Location location = null;
+        //TODO
+        return location;
+    }
+
+    public ArrayList<String> getPossibleExitsFromLocationPlayersIsOn(String nameOfTheLocationPlayerIsOn) {
+        ArrayList<String> nameOfLocationsThePlayerCanGoTo = new ArrayList<>();
 
         for (int i = 0; i < 4; i++) {
             //go up
@@ -42,31 +47,26 @@ public class Gameboard {
             //right
             //down
         }
-        return nameOfTilesThePlayerCanGoTo;
+        return nameOfLocationsThePlayerCanGoTo;
     }
 
     public int getNumRows() {
         return numRows;
     }
 
-    public int getTilesPerRow() {
-        return tilesPerRow;
+    public int getLocationsPerRow() {
+        return locationsPerRow;
     }
 
-    public String getTileNumberOfTheTilePlayerIsOn() {
-        String tileThatPlayerIsOn = "";
-        for (Tile tile : theGameBoard) {
-            if (tile.playerIsOnTile == true) {
-                tileThatPlayerIsOn = tile.getTileNumber();
+    public void setNewLocationPlayerIsOn(String locationNumberPlayerWantsToGoTo){
+        for (int i = 0; i < theGameBoard.size(); i++) {
+            if (theGameBoard.get(i).getLocationNumber().equals(locationNumberPlayerWantsToGoTo)){
+
             }
         }
-        return tileThatPlayerIsOn;
+        //below not done 9/5
+      locationTemp.setLocationPlayerIsOn(locationNumberPlayerWantsToGoTo);
     }
 
-    public void setTileThePlayerIsOn(String tileNumber){
-        if (theGameBoard.contains(tileNumber)){
-
-        }
-    }
 
 }
