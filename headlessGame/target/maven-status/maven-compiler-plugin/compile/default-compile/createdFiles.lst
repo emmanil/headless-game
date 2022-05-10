@@ -1,0 +1,12 @@
+game\Item.class
+game\Location.class
+game\Quest.class
+game\PlayableCharacter.class
+game\archivedClasses\OldMainNotUsedAfter10Maj.class
+game\Backpack.class
+game\Sound.class
+game\Character.class
+game\GameSystemDialog.class
+game\Gameboard.class
+game\Main.class
+game\NonPlayableCharacter.class
