@@ -2,8 +2,8 @@ package game;
 
 public class Backpack {
 
-    int howMuchRoom;
-    double howMuchCash;
+    private int howMuchRoom;
+    private double howMuchCash;
 
     public Backpack(int howMuchRoom, double howMuchCash) {
         this.howMuchRoom = 1;
