@@ -22,7 +22,6 @@ public class PlayerTest {
     @Test
     void saveNewPlayer(){
         Player player = new Player();
-        player.setHp(100000000);
         player = datastore.save(player);
         Assertions.assertTrue(player instanceof Player);
     }
