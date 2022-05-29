@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        GameSystemDialog survivor = new GameSystemDialog("survivor");
+        GameSystemDialog gameDoTheWork = new GameSystemDialog("doTheWork");
 
-        survivor.menu(survivor.getNameOfGame());
+        gameDoTheWork.menu(gameDoTheWork.getNameOfGame());
 
 
     }

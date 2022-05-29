@@ -20,7 +20,7 @@ public class GameSystemDialog {
 
         Backpack backpack = new Backpack(10,0);
         p("What is your name?");
-        PlayableCharacter player = new PlayableCharacter(scanner.next(), backpack);
+        Player player = new Player(scanner.next(), backpack);
         p("Hello " + player.getName()+",\nIn your backpack you have " + backpack.getHowMuchRoom()+ " liters of space available and " + backpack.getHowMuchCash() + " coins.");
 
 

@@ -18,8 +18,8 @@ public class Quest {
 
     private void createManyQuests() {
         Quest quest1 = new Quest("get water ", "in västra hamnen", ", after you report to möllevångstorget");
-        Quest quest2 = new Quest("get meat ", "in möllan", ", after you report to lilla torg");
-        Quest quest3 = new Quest("kill monster ", "in västra hamnen", ", after you report to gustav adolfs torg");
+        Quest quest2 = new Quest("get flowers ", "in möllan", ", after you report to lilla torg");
+        Quest quest3 = new Quest("mindfulness exercise ", "in västra hamnen", ", after you report to gustav adolfs torg");
 
         allQuests.add(quest1);
         allQuests.add(quest2);

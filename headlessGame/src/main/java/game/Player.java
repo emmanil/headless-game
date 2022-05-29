@@ -1,12 +1,12 @@
 package game;
 
-public class PlayableCharacter extends Character {
+public class Player extends Character {
 
     Quest nameOfPlayersCurrentQuest;
     Backpack playersBackpack;
 
 
-    public PlayableCharacter(String name, Backpack playersBackpack) {
+    public Player(String name, Backpack playersBackpack) {
         super(name);
 
         this.nameOfPlayersCurrentQuest = new Quest("", "", "");;

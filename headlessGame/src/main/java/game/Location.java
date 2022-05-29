@@ -13,11 +13,11 @@ public class Location implements Comparable<Location> {
     boolean playerIsAtLocation;
     int requiredLevelPlayerMustBeOnInOrderToEnterLocation;
 
-    ArrayList<NonPlayableCharacter> theNonplayableCharactersAtLocation;
+    ArrayList<NPC> theNonplayableCharactersAtLocation;
     ArrayList<Item> theItemsOnLocation;
     ArrayList<Quest> questsAtLocation;
 
-    NonPlayableCharacter tempNPC = new NonPlayableCharacter("t", false);
+    NPC tempNPC = new NPC("t", false);
     Quest tempQuest = new Quest("t", "t", "t");
 
 

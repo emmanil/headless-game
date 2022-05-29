@@ -2,14 +2,14 @@ package game.archivedClasses;
 
 import game.Backpack;
 import game.Gameboard;
-import game.PlayableCharacter;
+import game.Player;
 
 public class OldMainNotUsedAfter10Maj {
 
     public static void main(String[] args) {
         Backpack backpack = new Backpack(1,0);
 
-        PlayableCharacter survivor = new PlayableCharacter("Anna", backpack);
+        Player survivor = new Player("Anna", backpack);
 
 
         System.out.println("Hello "+ survivor.getName());

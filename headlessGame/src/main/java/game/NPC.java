@@ -3,17 +3,17 @@ package game;
 import java.util.ArrayList;
 
 
-public class NonPlayableCharacter extends Character {
+public class NPC extends Character {
 
     private boolean hasQuestToOffer;
 
     private Quest quest;
 
-    ArrayList<NonPlayableCharacter> allNpc = new ArrayList<>();
+    ArrayList<NPC> allNpc = new ArrayList<>();
 
     Quest tempQuest = new Quest("t", "t", "t");
 
-    public NonPlayableCharacter(String name, boolean hasQuestToOffer) {
+    public NPC(String name, boolean hasQuestToOffer) {
         super(name);
         this.hasQuestToOffer = hasQuestToOffer;
         if (hasQuestToOffer){
@@ -24,21 +24,21 @@ public class NonPlayableCharacter extends Character {
 
 
     public void createManyNPC() {
-        NonPlayableCharacter NPC1 = new NonPlayableCharacter("Lilleman", true);
-        NonPlayableCharacter NPC2 = new NonPlayableCharacter("Lillebror", false);
-        NonPlayableCharacter NPC3 = new NonPlayableCharacter("Gubben", true);
+        NPC NPC1 = new NPC("Lilleman", true);
+        NPC NPC2 = new NPC("Lillebror", false);
+        NPC NPC3 = new NPC("Gubben", true);
 
         allNpc.add(NPC1);
         allNpc.add(NPC2);
         allNpc.add(NPC3);
     }
 
-    public ArrayList<NonPlayableCharacter> getThisManyNPC(int howMany) {
+    public ArrayList<NPC> getThisManyNPC(int howMany) {
         createManyNPC();
-        ArrayList<NonPlayableCharacter> howmanyNPC = new ArrayList<>();
+        ArrayList<NPC> howmanyNPC = new ArrayList<>();
 
         for (int i = 0; i < howMany; i++) {
-            NonPlayableCharacter tempNPC = allNpc.get(i);
+            NPC tempNPC = allNpc.get(i);
             howmanyNPC.add(tempNPC);
         }
         return howmanyNPC;
