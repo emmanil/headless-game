@@ -1,8 +1,10 @@
 package game;
 
+import dev.morphia.annotations.Entity;
+
 import java.util.ArrayList;
 
-
+@Entity
 public class NPC extends Character {
 
     private boolean hasQuestToOffer;

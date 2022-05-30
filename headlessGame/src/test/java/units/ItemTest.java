@@ -22,7 +22,7 @@ public class ItemTest {
     //saves in collection item
     @Test
     void saveOneItem() {
-        Item sparklingFlower = new Item("sparklingFlower", "food", "pretty to look at and when eaten it restores health ", 1, 1);
+        Item sparklingFlower = new Item("sparklingFlower", "food", 1.0, 1, 1);
         sparklingFlower = datastore.save(sparklingFlower);
 
         Assertions.assertTrue(sparklingFlower instanceof Item);
@@ -30,8 +30,8 @@ public class ItemTest {
 
     @Test
     void saveManyItemsToDb() {
-        Item pinkFlower = new Item("pinkFlower", "decoration", "pretty", 1, 1);
-        Item whiteChocolate = new Item("white chocolate", "decoration", "pretty", 1, 1);
+        Item pinkFlower = new Item("pinkFlower", "decoration", 1.0, 1, 1);
+        Item whiteChocolate = new Item("white chocolate", "decoration", 1.0, 1, 1);
         datastore.save(pinkFlower);
         datastore.save(whiteChocolate);
     }

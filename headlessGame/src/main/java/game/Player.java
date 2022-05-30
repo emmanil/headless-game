@@ -1,5 +1,8 @@
 package game;
 
+import dev.morphia.annotations.Entity;
+
+@Entity
 public class Player extends Character {
 
     Quest nameOfPlayersCurrentQuest;
@@ -8,7 +11,6 @@ public class Player extends Character {
 
     public Player(String name, Backpack playersBackpack) {
         super(name);
-
         this.nameOfPlayersCurrentQuest = new Quest("", "", "");;
         this.playersBackpack = playersBackpack;
     }

@@ -1,9 +1,14 @@
 package game;
 
+import dev.morphia.annotations.Entity;
+
 import java.util.ArrayList;
 
+@Entity
 public class Item {
 
+    //todo lägga till @id mm
+    String id;
     String nameOfItem;
     String typeOfItem;
     Double priceOfItem;

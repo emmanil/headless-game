@@ -3,6 +3,7 @@ package units;
 import com.mongodb.client.model.Filters;
 import dev.morphia.Datastore;
 import dev.morphia.query.Query;
+import game.Backpack;
 import game.Player;
 import game.utilities.DbConnection;
 import org.junit.jupiter.api.Assertions;
@@ -21,7 +22,8 @@ public class PlayerTest {
 
     @Test
     void saveNewPlayer(){
-        Player player = new Player();
+        Backpack playersBackpack = new Backpack(20,100);
+        Player player = new Player("Sara", playersBackpack);
         player = datastore.save(player);
         Assertions.assertTrue(player instanceof Player);
     }

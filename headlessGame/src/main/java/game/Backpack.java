@@ -1,7 +1,10 @@
 package game;
 
+import dev.morphia.annotations.Entity;
+
 import java.util.ArrayList;
 
+@Entity
 public class Backpack {
 
     private int howMuchRoom;
