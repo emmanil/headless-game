@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/headlessGame/game40daysInMalmo.iml" filepath="$PROJECT_DIR$/headlessGame/game40daysInMalmo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/headless-game.iml" filepath="$PROJECT_DIR$/.idea/headless-game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/headlessGame/doTheWorkGame.iml" filepath="$PROJECT_DIR$/headlessGame/doTheWorkGame.iml" />
     </modules>
   </component>
 </project>
