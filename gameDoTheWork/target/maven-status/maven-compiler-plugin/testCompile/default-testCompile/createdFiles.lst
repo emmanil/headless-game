@@ -1,0 +1,6 @@
+cucumber\GetSkillPoints.class
+units\DbConnectionTest.class
+units\NPCTest.class
+units\BackpackTest.class
+units\ItemTest.class
+units\PlayerTest.class

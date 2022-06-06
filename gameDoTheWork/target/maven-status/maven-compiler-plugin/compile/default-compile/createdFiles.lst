@@ -1,0 +1,14 @@
+game\NPC.class
+game\utilities\Config.class
+game\Sound.class
+game\GameSystemDialog.class
+game\Item.class
+game\utilities\DbConnection.class
+game\Location.class
+game\Quest.class
+game\archivedClasses\OldMainNotUsedAfter10Maj.class
+game\Player.class
+game\Backpack.class
+game\Character.class
+game\Gameboard.class
+game\Main.class
