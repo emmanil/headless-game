@@ -12,6 +12,7 @@ public class Item {
     @Id
     String id;
     String nameOfItem;
+
     String typeOfItem;
     Double priceOfItem;
     int stats;
@@ -28,6 +29,10 @@ public class Item {
     }
 
     public Item() {
+    }
+
+    public String getNameOfItem() {
+        return nameOfItem;
     }
 
     public void createManyItem() {

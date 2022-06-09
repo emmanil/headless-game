@@ -36,7 +36,7 @@ public class DbConnection {
                 .build();
 //doTheWorkGame
         datastore = Morphia.createDatastore(MongoClients.create(settings), "gameDoTheWork");
-        datastore.getMapper().mapPackage("com.doTheWorkGame");
+        datastore.getMapper().mapPackage("com.gameDoTheWork");
         datastore.ensureIndexes();
     }
 

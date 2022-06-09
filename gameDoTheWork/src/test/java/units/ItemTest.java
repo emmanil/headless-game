@@ -34,6 +34,7 @@ public class ItemTest {
     @Test
     void saveManyItemsToDb() {
         Item pinkFlower = new Item();
+        pinkFlower.setName("pinkFlower");
         Item whiteChocolate = new Item();
         datastore.save(pinkFlower);
         datastore.save(whiteChocolate);
@@ -47,11 +48,10 @@ public class ItemTest {
 
     @Test
     void getItemByItemName() {
-        String itemsName = "sparklingFlower";
-        Item itemSheGets = datastore.find(Item.class).stream()
-                .filter(item -> itemsName.equalsIgnoreCase(itemsName)).findAny().orElse(null);
+        String itemsName = "pinkFlower";
+        Item itemSheGets = datastore.find(Item.class).filter(Filters.eq("nameOfItem", itemsName)).first();
         Assertions.assertTrue(itemSheGets instanceof Item);
-        Assertions.assertTrue("sparklingFlower".equals(itemSheGets.getName()));
+        Assertions.assertEquals("pinkFlower",itemSheGets.getName());
     }
 
     @Test
@@ -74,11 +74,11 @@ public class ItemTest {
     @Test
     void getAllItemsByACertainItemName() {
 
-        String itemsName = "sparklingFlower";
-        long sizeOfList = datastore.find(Item.class).stream().filter(item -> item.getName().equals(itemsName)).count();
+        String nameOfItem = "pinkFlower";
+        long sizeOfList = datastore.find(Item.class).filter(Filters.eq("nameOfItem", nameOfItem)).stream().count();
         System.out.println("sizeOfList = " + sizeOfList);
 
-        List<Item> itemList = datastore.find(Item.class).stream().filter(item -> item.getName().equals(itemsName)).collect(Collectors.toList());
+        List<Item> itemList = datastore.find(Item.class).stream().filter(item -> item.getName().equals(nameOfItem)).collect(Collectors.toList());
 
         Assertions.assertEquals((int) sizeOfList, itemList.size());
     }

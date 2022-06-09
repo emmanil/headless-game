@@ -17,11 +17,11 @@ public class Config {
         try (FileInputStream fileInputStream = new FileInputStream(path)) {
             properties.load(fileInputStream);
         } catch (FileNotFoundException ex) {
-            System.out.println(ex);
-        } catch (InvalidClassException e) { //added InvalidClassException 29 maj
-            System.out.println("InvalidClassException " + e.getMessage());
+            System.out.println(ex.getMessage());
+        } catch (InvalidClassException e) {
+            System.out.println("InvalidClassException: " + e.getMessage());
         } catch (IOException ex) {
-            System.out.println(ex);
+            System.out.println("IOException: " + ex.getMessage());
         }
     }
 
