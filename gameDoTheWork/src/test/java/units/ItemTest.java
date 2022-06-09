@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ItemTest {
 
@@ -78,7 +77,7 @@ public class ItemTest {
         long sizeOfList = datastore.find(Item.class).filter(Filters.eq("nameOfItem", nameOfItem)).stream().count();
         System.out.println("sizeOfList = " + sizeOfList);
 
-        List<Item> itemList = datastore.find(Item.class).stream().filter(item -> item.getName().equals(nameOfItem)).collect(Collectors.toList());
+        List<Item> itemList = datastore.find(Item.class).filter(Filters.eq("nameOfItem", nameOfItem)).stream().toList();
 
         Assertions.assertEquals((int) sizeOfList, itemList.size());
     }
