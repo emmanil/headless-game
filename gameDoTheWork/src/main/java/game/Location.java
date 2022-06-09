@@ -1,24 +1,30 @@
 package game;
 
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Id;
+
 import java.util.ArrayList;
 
+@Entity
 public class Location implements Comparable<Location> {
 
-    String locationNumber;
-    String nameOfLocation;
-    int howManyNpcThatAreAtLocation;
-    int howManyItemsOnTheGroundInLocation;
-    String whatSoundOnLocation;
-    int howManyQuestsOnLocation;
-    boolean playerIsAtLocation;
-    int requiredLevelPlayerMustBeOnInOrderToEnterLocation;
+    @Id
+    protected String id;
+    protected String locationNumber;
+    protected String nameOfLocation;
+    protected int howManyNpcThatAreAtLocation;
+    protected int howManyItemsOnTheGroundInLocation;
+    protected String whatSoundOnLocation;
+    protected int howManyQuestsOnLocation;
+    protected boolean playerIsAtLocation;
+    protected int requiredLevelPlayerMustBeOnInOrderToEnterLocation;
 
-    ArrayList<NPC> theNonplayableCharactersAtLocation;
-    ArrayList<Item> theItemsOnLocation;
-    ArrayList<Quest> questsAtLocation;
+    protected ArrayList<NPC> theNonplayableCharactersAtLocation;
+    protected ArrayList<Item> theItemsOnLocation;
+    protected ArrayList<Quest> questsAtLocation;
 
-    NPC tempNPC = new NPC("t", false);
-    Quest tempQuest = new Quest("t", "t", "t");
+    protected NPC tempNPC = new NPC("t", false);
+    protected Quest tempQuest = new Quest("t", "t", "t");
 
 
     public Location(String locationNumber) {
@@ -76,6 +82,10 @@ public class Location implements Comparable<Location> {
         this.whatSoundOnLocation = whatSoundOnLocation;
         this.howManyQuestsOnLocation = howManyQuestsOnLocation;
         this.requiredLevelPlayerMustBeOnInOrderToEnterLocation = requiredLevelPlayerMustBeOnInOrderToEnterLocation;
+    }
+
+    public String id(){
+        return id;
     }
 
     public String getLocationNumber() {

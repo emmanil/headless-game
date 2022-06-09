@@ -8,14 +8,13 @@ public class Player extends Character {
 
     @Id
     protected String id;
-    protected Quest nameOfPlayersCurrentQuest;
+    protected String nameOfPlayersCurrentQuest;
     protected Backpack playersBackpack;
     protected int level;
 
     public Player(String name, Backpack playersBackpack) {
         super(name);
-        this.nameOfPlayersCurrentQuest = new Quest("", "", "");
-        ;
+        this.nameOfPlayersCurrentQuest = getNameOfPlayersCurrentQuest();
         this.playersBackpack = playersBackpack;
     }
 
@@ -23,8 +22,12 @@ public class Player extends Character {
     }
 
 
-    public Quest getNameOfPlayersCurrentQuest() {
-        return nameOfPlayersCurrentQuest;
+    public String getNameOfPlayersCurrentQuest() {
+        if (nameOfPlayersCurrentQuest == null){
+            return "you dont have a quest right now.";
+        }else {
+            return nameOfPlayersCurrentQuest;
+        }
     }
 
     public Backpack getPlayersBackpack() {
